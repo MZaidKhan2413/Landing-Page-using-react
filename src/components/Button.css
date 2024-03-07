@@ -1,7 +1,8 @@
 .Button {
-    background-color: var(--element-color);
+    background-image: linear-gradient(to right bottom, var(--element-color), var(--element-color-light));
     border-radius: 1.25rem;
     transition: all ease-in .2s;
+    color: #1a1919cc;
 }
 
 .Button:hover, .Button:active {

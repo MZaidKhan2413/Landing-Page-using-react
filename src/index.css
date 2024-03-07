@@ -3,8 +3,13 @@
 :root {
   --text-color: #EEEEEE;
   --primary-color: #222831;
-  --secondary-color: #393E46;
+  --secondary-color: #393e46ef;
   --element-color: #02929a;
+  --element-color-light: #05ced8;
+}
+
+.row {
+  --bs-gutter-x: 0;
 }
 
 * {
@@ -16,10 +21,19 @@ body {
   font-family: "Poppins", sans-serif;
   background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   color: var(--text-color);
+  overflow-x: hidden;
 }
 a, li, button {
   all: unset;
 }
 a, button{
   cursor: pointer;
+}
+
+hr {
+  background: linear-gradient(to right, var(--element-color), var(--element-color-light));
+  height: .25rem;
+  width: 10rem;
+  border: none;
+  opacity: 1;
 }
