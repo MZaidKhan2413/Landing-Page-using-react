@@ -1,0 +1,9 @@
+.Button {
+    background-color: var(--element-color);
+    border-radius: 1.25rem;
+    transition: all ease-in .2s;
+}
+
+.Button:hover, .Button:active {
+    box-shadow: 0 0 10px var(--primary-color);
+}

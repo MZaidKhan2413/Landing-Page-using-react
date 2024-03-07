@@ -1,0 +1,7 @@
+.Nav_Options {
+    transition: all ease-in .2s;
+    opacity: .8;
+}
+.Nav_Options:hover {
+    opacity: 1;
+}
