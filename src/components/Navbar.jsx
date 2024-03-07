@@ -6,6 +6,13 @@ import { useState } from "react";
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
 
+  const navOptions = [
+    { text: "home", link: "#" },
+    { text: "About us", link: "#" },
+    { text: "portfolio", link: "#" },
+    { text: "contact us", link: "#" },
+  ];
+
   return (
     <nav className="Navbar">
       <div className="Navbar-inner d-flex justify-content-between align-items-center px-5 py-3">
@@ -14,10 +21,9 @@ export default function Navbar() {
         </div>
 
         <div className="navs d-none d-md-flex align-items-center gap-5">
-          <Nav_Options text="home" link="#" />
-          <Nav_Options text="About us" link="#" />
-          <Nav_Options text="portfolio" link="#" />
-          <Nav_Options text="contact us" link="#" />
+          {navOptions.map((opt, idx) => (
+            <Nav_Options key={idx} text={opt.text} link={opt.link} />
+          ))}
           <Button text="Get Started" />
         </div>
 
@@ -26,16 +32,17 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className={menu ? "drop-menu drop-menu-open d-md-none" : "drop-menu"}>
-          <div className="drop-menu-inner">
-            <div className="px-5 py-3">
-              <Nav_Options text="home" link="#" />
-              <Nav_Options text="About us" link="#" />
-              <Nav_Options text="portfolio" link="#" />
-              <Nav_Options text="contact us" link="#" />
-              <Button text="Get Started" />
-            </div>
+      <div
+        className={menu ? "drop-menu drop-menu-open d-md-none" : "drop-menu"}
+      >
+        <div className="drop-menu-inner">
+          <div className="px-5 py-3">
+            {navOptions.map((opt, idx) => (
+              <Nav_Options key={idx} text={opt.text} link={opt.link} />
+            ))}
+            <Button text="Get Started" />
           </div>
+        </div>
       </div>
     </nav>
   );
