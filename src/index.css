@@ -23,11 +23,13 @@ body {
   color: var(--text-color);
   overflow-x: hidden;
 }
-a, li, button {
+a, button {
   all: unset;
-}
-a, button{
   cursor: pointer;
+}
+
+li {
+  list-style: none;
 }
 
 hr {
